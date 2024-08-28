@@ -6,6 +6,7 @@ import { ConvexClientProvider } from "@/components/providers/convex-client-provi
 import { Toaster } from "@/components/ui/sonner";
 import { ModalProvider } from "@/components/providers/modal-provider";
 import { Loading } from "@/components/auth/loading";
+import { ClerkProvider, SignIn } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,16 +21,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Suspense fallback={<Loading />}>
-        <ConvexClientProvider>
-          <Toaster />
-          <ModalProvider />
-          {children}
-        </ConvexClientProvider>
-        </Suspense>
-      </body>
-    </html>
+    <ClerkProvider afterSignOutUrl={"/homepage"}>
+      <html lang="en">
+        <body className={inter.className}>
+          <Suspense fallback={<Loading />}>
+            <ConvexClientProvider>
+              <Toaster />
+              <ModalProvider />
+              {children}
+            </ConvexClientProvider>
+          </Suspense>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -6,7 +6,7 @@ import {
     DialogContent,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import CreateOrganizationPage from "@/components/create-organization/[...index]";
+import CreateOrganizationPage from "@/components/create-organization/[[...index]]";
 
 export const EmptyOrg = () => {
     return (

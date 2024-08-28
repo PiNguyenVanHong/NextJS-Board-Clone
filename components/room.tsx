@@ -17,7 +17,6 @@ export const Room = ({ children, roomId, fallback, }: RoomProps) => {
     <LiveblocksProvider
       authEndpoint={process.env.NEXT_PUBLIC_LIVEBLOCKS_URL!}
       throttle={16}
-      // publicApiKey={process.env.NEXT_PUBLIC_LIVEBLOCKS_API_KEY!}
     >
       <RoomProvider 
         id={roomId} 

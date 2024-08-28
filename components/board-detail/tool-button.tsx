@@ -4,8 +4,10 @@ import { LucideIcon } from "lucide-react";
 
 import { Hint } from "@/components/hint";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface ToolButtonProps {
+    index?: string;
     label: string;
     icon: LucideIcon;
     onClick: () => void;
@@ -14,7 +16,7 @@ interface ToolButtonProps {
 }
 
 export const ToolButton = ({
-    label, icon: Icon, onClick, isActive, isDisabled,
+    index, label, icon: Icon, onClick, isActive, isDisabled,
 }: ToolButtonProps) => {
 
     return (
@@ -26,6 +28,11 @@ export const ToolButton = ({
                 variant={isActive ? "boardActive" : "board"}
             >
                 <Icon />
+                <span className={cn(
+                    "relative -bottom-3 text-[9px]",
+                    isActive ? " text-blue-800"
+                    : "text-zinc-400",
+                )}>{index}</span>
             </Button>
         </Hint>
     );

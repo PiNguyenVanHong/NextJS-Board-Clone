@@ -23,7 +23,7 @@ export const SearchInput = () => {
 
     useEffect(() => {
         const url = qs.stringifyUrl({
-            url: "/",
+            url: "/homepage/",
             query: {
                 search: debouncedValue[0],
             },

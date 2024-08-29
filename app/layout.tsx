@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider afterSignOutUrl={"/homepage"}>
+    <ClerkProvider afterSignOutUrl={"/homepage"} signInForceRedirectUrl={"/homepage"} signUpForceRedirectUrl={"/homepage"}>
       <html lang="en">
         <body className={inter.className}>
           <Suspense fallback={<Loading />}>

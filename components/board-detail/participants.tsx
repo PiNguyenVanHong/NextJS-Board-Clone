@@ -1,24 +1,30 @@
 "use client";
 
-import { useOthers, useSelf } from "@liveblocks/react";
 import { connectionIdToColor } from "@/lib/utils";
+import { User } from "@liveblocks/client";
 
 import { UserAvatar } from "@/components/user-avatar";
 
-const MAX_SHOWN_USERS = 5;
+const MAX_SHOWN_USERS = 2;
 
-export const Participants = () => {
-    const users = useOthers();
-    const currentUser = useSelf();
+interface ParticipantsProps {
+    users: any | null;
+    currentUser: any;
+}
+
+export const Participants = ({
+    users, currentUser,
+}: ParticipantsProps) => {
     const hasMoreUsers = users.length > MAX_SHOWN_USERS;
 
-    console.log(users);
-    
+    if(!users || !currentUser) {
+        return <ParticipantsSkeleton />;
+    }
 
     return (
         <div className="absolute h-12 top-2 right-2 bg-white rounded-md p-3 flex items-center shadow-md">
             <div className="flex gap-x-2">
-                {users.slice(0, MAX_SHOWN_USERS).map(({ connectionId, info }) => {
+                {users.slice(0, MAX_SHOWN_USERS).map(({ connectionId, info }: any) => {
                     return (
                         <UserAvatar 
                             borderColor={connectionIdToColor(connectionId)}

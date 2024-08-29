@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { nanoid } from "nanoid";
+import { Loader } from "lucide-react";
 import {
   Camera,
   CanvasMode,
@@ -20,6 +21,7 @@ import {
   useStorage,
   useOthersMapped,
   useSelf,
+  useOthers,
 } from "@liveblocks/react";
 import { LiveObject } from "@liveblocks/client";
 import {
@@ -49,6 +51,8 @@ interface CanvasProps {
 }
 
 export const Canvas = ({ boardId }: CanvasProps) => {
+  const users = useOthers();
+  const currentUser = useSelf();
   const layerIds = useStorage((root) => root.layerIds);
 
   const pencilDraft = useSelf((me) => me.presence.pencilDraft);
@@ -431,7 +435,7 @@ export const Canvas = ({ boardId }: CanvasProps) => {
   return (
     <main className="w-full h-full relative bg-neutral-100 touch-none">
       <Info boardId={boardId} />
-      <Participants />
+      <Participants users={users} currentUser={currentUser} />
       <Toolbar
         canvasState={canvasState}
         setCanvasState={setCanvasState}
@@ -441,7 +445,8 @@ export const Canvas = ({ boardId }: CanvasProps) => {
         redo={history.redo}
       />
       <SelectionTools camera={camera} setLastUsedColor={setLastUserdColor} />
-      <svg
+      {users && currentUser ? (
+        <svg
         className="w-screen h-screen"
         onWheel={onWheel}
         onPointerMove={onPointerMove}
@@ -484,6 +489,12 @@ export const Canvas = ({ boardId }: CanvasProps) => {
           )}
         </g>
       </svg>
+      ) : (
+        <div className="w-full h-full flex flex-col gap-2 items-center justify-center">
+          <Loader className="w-10 h-10 text-muted-foreground animate-spin" />
+          <span className="text-gray-400 font-light animate-pulse">Wait a few seconds...</span>
+        </div>
+      )}
     </main>
   );
 };

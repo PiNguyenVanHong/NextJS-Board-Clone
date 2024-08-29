@@ -17,6 +17,7 @@ import {
     DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { redirect, useRouter } from "next/navigation";
 
 interface ActionsProps {
     children: React.ReactNode;
@@ -31,6 +32,7 @@ export const Actions = ({
 }: ActionsProps) => {
     const { onOpen } = useRenameModal();
     const { mutate, pending } = useApiMutation(api.board.remove);
+    const router = useRouter();
 
     const onCopyLink = () => {
         navigator.clipboard.writeText(
@@ -42,8 +44,14 @@ export const Actions = ({
 
     const onDelete = () => {
         mutate({ id })
-            .then(() => toast.success("Board deleted"))
-            .catch(() => toast.error("Failed to delete board"));
+            .then(() => {
+                toast.success("Board deleted");
+                router.push("/homepage");
+            })
+            .catch(() => {
+                toast.error("Failed to delete board");
+                router.push("/homepage");
+            });
     }
 
     return (

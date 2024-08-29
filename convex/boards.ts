@@ -25,10 +25,10 @@ export const get = query({
                         .eq("orgId", args.orgId)
                 )
                 .order("desc")
-                .collect();
+                .collect();                
 
                 const ids = favoritedBoards.map((b) => b.boardId); 
-
+                
                 const boards = await getAllOrThrow(ctx.db, ids);
 
                 return boards.map((board) => ({

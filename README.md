@@ -47,6 +47,7 @@ The following project was made
 - [TailwindCSS](https://tailwindcss.com/)
 - [Shadcn-UI](https://ui.shadcn.com/)
 - [ConvexDev](https://www.convex.dev/)
+- [Liveblocks](https://liveblocks.io/)
 - [Clerk](https://dashboard.clerk.com/)
 - [Uploadthing](https://uploadthing.com/)
 - [Date-FNS](https://date-fns.org/)

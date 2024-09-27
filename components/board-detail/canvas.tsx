@@ -408,10 +408,13 @@ export const Canvas = ({ boardId }: CanvasProps) => {
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      switch (e.key) {
-        case "Backspace":
-          deleteLayers();
-          break;
+      switch (e.key) {  
+        case "Backspace": {
+          if(e.shiftKey) {
+            deleteLayers();
+            break;
+          }
+        }
         case "z": {
           if (e.ctrlKey || e.metaKey) {
             if (e.shiftKey) {

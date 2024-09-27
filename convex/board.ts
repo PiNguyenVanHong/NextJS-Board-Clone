@@ -19,7 +19,7 @@ const images = [
     "https://utfs.io/f/b987c400-b9fa-4fd3-9e37-96159f2a1ef3-18e.png",
     "https://utfs.io/f/104246a4-95be-4efb-bd7e-89f4baf1b67f-17r.png",
     "https://utfs.io/f/fdedc46f-9a7c-4a6f-a376-1f13a7bccede-18k.png",
-    "https://utfs.io/f/f38fa20f1-1623-496a-9a4d-28d1167efa7b-18l.png",
+    "https://utfs.io/f/38fa20f1-1623-496a-9a4d-28d1167efa7b-18l.png",
     "https://utfs.io/f/34f78f0e-9814-45e6-abb3-dc032435e426-17s.png",
 ];
 

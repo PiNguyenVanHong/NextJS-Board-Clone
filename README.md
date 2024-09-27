@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h4 align="center">
+ <!-- <a href="https://youtu.be/Q7RuG2dvOAs?si=Pg9OEci3rVjLyfO_" > -->
+    <img src="https://utfs.io/f/8GILMPE2UYNwlmdxc9R7lk86jfmX2EZsFBwWec1i9gGrKzbn" width="500px" />
+    <br>
+ <!-- </a> -->
+ <div align><b>My Project 2024 - Boardify Whiteboard Tool</b></div>
+</h4>
+<p align="center">
+  <!-- <a href="https://youtu.be/Q7RuG2dvOAs?si=Pg9OEci3rVjLyfO_" target="_blank">
+     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank" /> 
+  </a> -->
+  
+  <a href="https://board-draw-rho.vercel.app/homepage" target="_blank">
+     <img src="https://img.shields.io/badge/Vercel-ffffff?style=for-the-badge&logo=vercel&logoColor=black&padding=14px" target="_blank" /> 
+  </a>
+</p>
+<br>
 
-## Getting Started
+## :bricks: Project ###\4: Boardify Whiteboard Tool (Miro Clone)
 
-First, run the development server:
+### :wink: About Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Hello Everyone!!!! Have a nice day! brosssss. This project was inspired by <b>Miro</b> and using so many popular technologies such as: 
+- Convex: The new database realtime with TypeScript system
+- Liveblocks: The platform for adding, editing,... into this website. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### :camera_flash: Some UI Screenshorts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<div align="center">
+  <div align="center">
+    <img src="https://utfs.io/f/8GILMPE2UYNwzyUeFpLZRlXJE1YitVda8PTCHB9Lrj4nguGN" width="500px" target="_blank" /> 
+    <img src="https://utfs.io/f/8GILMPE2UYNw8m7tZnE2UYNwQy0W61tqaPMJILxgcCOVmBHe" width="500px" target="_blank" /> 
+    <img src="https://utfs.io/f/8GILMPE2UYNwOAo7xRInqzsRd6yV780FA5x2WltcCXKpH1o9" width="500px" target="_blank" /> 
+  </div>
+  <div align="center">
+    <img src="https://utfs.io/f/8GILMPE2UYNw2M02Ug0XS4ebBEwtoZjsph5MLVirv1yQX7FA" width="300px" target="_blank" />
+    <img src="https://utfs.io/f/8GILMPE2UYNwkGIakaTYVsHUyrl1i26KEIL7fBWctoFmxZ4u" width="300px" target="_blank" />
+    <img src="https://utfs.io/f/8GILMPE2UYNwitqIPhuxOLpJUwfuteygCFlQ9IVsNnzHkD0a" width="300px" target="_blank" />
+  </div>
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### :medal_military: Used Technologies
 
-## Learn More
+The following project was made
 
-To learn more about Next.js, take a look at the following resources:
+- [NextJS](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Shadcn-UI](https://ui.shadcn.com/)
+- [ConvexDev](https://www.convex.dev/)
+- [Clerk](https://dashboard.clerk.com/)
+- [Uploadthing](https://uploadthing.com/)
+- [Date-FNS](https://date-fns.org/)
+- [Nanoid](https://www.npmjs.com/package/nanoid)
+- [Usehooks-TS](https://usehooks-ts.com/)
+- [Query-String](https://www.npmjs.com/package/query-string)
+- [Zustand](https://www.npmjs.com/package/zustand)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Eslint](https://www.npmjs.com/package/eslint)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="center">Made with love ❤️ by <b><a src="https://github.com/PiNguyenVanHong">PiKayQi</a></b></p>
